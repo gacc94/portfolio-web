@@ -25,3 +25,41 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Instalaciones - Linters
+
+1. Eslint
+
+```
+ng add @angular-eslint/schematics
+```
+
+2. Prettier
+
+```
+yarn add -D prettier@2.8.8 pretty-quick
+```
+
+3. Configurar prettier para trabajar con ESLint
+
+```
+yarn add prettier-eslint eslint-config-prettier eslint-plugin-prettier -D
+```
+
+-   Si la version actual de prettier es 3.0 y eslint-plugin-prettier es 4.2.1 instalar la version alpha
+
+```
+yarn add -D eslint-plugin-prettier@alpha
+```
+
+4. Husky
+
+```
+npx husky-init && yarn
+```
+
+5. lint-staged
+
+```
+yarn add -D lint-staged
+```
