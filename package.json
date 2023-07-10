@@ -12,7 +12,8 @@
 		"format": "prettier --write \"./src/**/*.{ts,json,html}\"",
         "format:quick": "pretty-quick --pattern \"src/**/*.*(ts|json|html|scss)\" --staged",
 		"prepare": "husky install",
-		"precommit": "yarn format:quick && yarn lint:fix"
+		"precommit": "yarn format:quick && yarn lint:fix",
+        "prepush": "yarn lint"
 	},
 	"private": true,
 	"dependencies": {
