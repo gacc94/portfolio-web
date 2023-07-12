@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import emailJs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { IEmailUser } from '../interfaces/email.interface';
 import { from, Observable } from 'rxjs';
 
 @Injectable({
