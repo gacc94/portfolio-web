@@ -1,21 +1,51 @@
 .about {
 	&__container {
 		row-gap: 2.5rem;
+		@media screen and (min-width: 576px) {
+			grid-template-columns: 360px;
+			justify-content: center;
+		}
+		@media screen and (min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+		}
+		@media screen and (min-width: 1152px) {
+			grid-template-columns: 550px 460px;
+			column-gap: 4.5rem;
+			padding-bottom: 1rem;
+		}
 	}
 	&__data {
 		text-align: center;
+
+		@media screen and (min-width: 768px) {
+			text-align: start;
+			order: 1;
+			& .section__subtitle,
+			.section__title {
+				text-align: initial;
+			}
+		}
 	}
 	&__description {
 		margin-bottom: 2rem;
+		@media screen and (min-width: 1152px) {
+			margin-bottom: 3rem;
+		}
 	}
 	&__image {
 		justify-self: center;
 	}
 	&__blob {
 		width: 320px;
-
 		& path {
 			stroke: var(--first-color);
+		}
+		@media screen and (min-width: 768px) {
+			width: 400px;
+		}
+		@media screen and (min-width: 1152px) {
+			width: 550px;
 		}
 	}
 }

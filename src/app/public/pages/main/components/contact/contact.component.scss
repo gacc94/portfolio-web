@@ -1,6 +1,14 @@
 .contact {
 	&__container {
 		padding-top: 1rem;
+		@media screen and (min-width: 576px) {
+			grid-template-columns: 360px;
+			justify-content: center;
+		}
+		@media screen and (min-width: 1152px) {
+			grid-template-columns: 680px;
+			padding-block: 2.5rem 2rem;
+		}
 	}
 	&__form,
 	&__group {
@@ -9,6 +17,15 @@
 	}
 	&__form {
 		position: relative;
+		@media screen and (min-width: 1152px) {
+			row-gap: 1.5rem;
+		}
+	}
+	&__group {
+		@media screen and (min-width: 1152px) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 1.5rem;
+		}
 	}
 	&__input,
 	&__textarea {
@@ -20,10 +37,18 @@
 			color: var(--text-color);
 		}
 	}
+	&__input {
+		@media screen and (min-width: 1152px) {
+			padding: 1.5rem;
+		}
+	}
 	&__textarea {
 		height: 11rem;
 		resize: none;
 		margin-bottom: 2rem;
+		@media screen and (min-width: 1152px) {
+			height: 20rem;
+		}
 	}
 	&__button {
 		justify-self: center;

@@ -11,6 +11,10 @@
 	justify-content: space-between;
 	align-items: center;
 
+	@media screen and (min-width: 1023px) {
+		height: calc(var(--header-height) + 1.5rem);
+	}
+
 	&__menu {
 		@media screen and (max-width: 1023px) {
 			position: fixed;
@@ -24,9 +28,14 @@
 			-webkit-backdrop-filter: blur(1.5rem); /** Safari */
 			transition: right 0.4s ease;
 		}
-
 		&.show-menu {
 			right: 0;
+		}
+		@media screen and (min-width: 768px) {
+			width: 55%;
+		}
+		@media screen and (min-width: 1023px) {
+			width: initial;
 		}
 	}
 
@@ -45,12 +54,20 @@
 		font-size: 1.25rem;
 		color: var(--title-color);
 		cursor: pointer;
+
+		@media screen and (min-width: 1023px) {
+			display: none;
+		}
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
 		row-gap: 3rem;
+		@media screen and (min-width: 1023px) {
+			flex-direction: row;
+			column-gap: 3rem;
+		}
 	}
 
 	&__link {
@@ -83,5 +100,9 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
+		@media screen and (min-width: 1023px) {
+			backdrop-filter: blur(25px);
+			-webkit-backdrop-filter: blur(25px);
+		}
 	}
 }

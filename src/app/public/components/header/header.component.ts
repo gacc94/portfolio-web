@@ -10,8 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
 	ngOnInit(): void {
-		/*=============== SHOW MENU ===============*/
-		const navMenu = document.getElementById('nav-menu'),
+		/*
+		 * =============== SHOW MENU ===============*/
+		const navMenu: HTMLElement = document.getElementById('nav-menu') as HTMLElement,
 			navToggle = document.getElementById('nav-toggle'),
 			navClose = document.getElementById('nav-close');
 

@@ -14,6 +14,9 @@
 	&:hover {
 		transform: translateY(-0.25rem);
 	}
+	@media screen and (min-width: 1152px) {
+		right: 3rem;
+	}
 }
 
 .show-scroll {

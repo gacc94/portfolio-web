@@ -5,6 +5,18 @@
 		row-gap: 2rem;
 		justify-content: center;
 		padding-block: 1rem;
+		@media screen and (min-width: 576px) {
+			grid-template-columns: 360px;
+			justify-content: center;
+		}
+		@media screen and (min-width: 768px) {
+			grid-template-columns: repeat(2, 352px);
+		}
+		@media screen and (min-width: 1152px) {
+			grid-template-columns: repeat(3, 350px);
+			row-gap: 3rem;
+			padding-block: 2.5rem 4rem;
+		}
 	}
 
 	&__card {
@@ -41,6 +53,9 @@
 	&__button {
 		color: var(--title-color);
 		font-size: var(--small-font-size);
+		@media screen and (min-width: 1152px) {
+			font-size: var(--normal-font-size);
+		}
 	}
 	&__subtitle {
 		display: block;
