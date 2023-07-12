@@ -48,3 +48,7 @@
 		box-shadow: 0 8px 24px hsla(var(--hue), 100% 40% 0.25);
 	}
 }
+/*Active Link*/
+.active-link {
+	color: var(--first-color) !important;
+}

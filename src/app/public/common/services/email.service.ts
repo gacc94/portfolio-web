@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import emailJs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { from, Observable } from 'rxjs';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class EmailService {
-	private readonly serviceID: string = 'service_0gdu4u9';
-	private readonly templateID: string = 'template_46aonlq';
-	private readonly publicKey: string = '0KIbgFpBYPMychYWl';
-
+	private readonly dataEmail = environment.emailJS;
 	sendEmail(template: { name: string; email: string; message: string }): Observable<EmailJSResponseStatus> {
-		return from(emailJs.send(this.serviceID, this.templateID, template, this.publicKey));
+		return from(emailJs.send(this.dataEmail.serviceId, this.dataEmail.templateId, template, this.dataEmail.publicKey));
 	}
 }
