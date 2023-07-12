@@ -1,0 +1,27 @@
+.services {
+	&__container {
+		row-gap: 2rem;
+		padding-block: 1rem;
+	}
+	&__card {
+		text-align: center;
+		background-color: var(--container-color);
+		padding: 3rem 1.25rem;
+		border-radius: 1rem;
+		border: 2px solid var(--container-color);
+		transition: border-color 0.4s ease;
+		&:hover {
+			border: 2px solid var(--first-color);
+		}
+	}
+	&__icon {
+		display: block;
+		font-size: 4rem;
+		color: var(--first-color);
+		margin-bottom: 0.75rem;
+	}
+	&__title {
+		font-size: var(--h2-font-size);
+		margin-bottom: 1.5rem;
+	}
+}
