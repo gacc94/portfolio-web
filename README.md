@@ -63,3 +63,8 @@ npx husky-init && yarn
 ```
 yarn add -D lint-staged
 ```
+
+6. EmailJs/Browser (Para envio de emils de lado de cliente)
+~~~
+yarn add @emailjs/browser
+~~~
