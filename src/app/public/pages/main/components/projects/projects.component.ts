@@ -50,7 +50,7 @@ export class ProjectsComponent implements AfterViewInit {
 		}
 	];
 	ngAfterViewInit(): void {
-		const projects: HTMLElement = this.project.nativeElement;
+		const projects = this.project.nativeElement;
 		const cards = this.cards;
 		const callbackFn = (entries: IntersectionObserverEntry[]): void => {
 			entries.forEach((entry) => {
