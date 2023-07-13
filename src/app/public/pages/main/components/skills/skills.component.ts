@@ -22,7 +22,7 @@ export class SkillsComponent implements OnInit, AfterViewInit {
 		const skillData = this.skillData.nativeElement;
 		const skillContent = this.skillContent.nativeElement;
 
-		const callbackFn = (entries: IntersectionObserverEntry[], observer: IntersectionObserver): void => {
+		const callbackFn = (entries: IntersectionObserverEntry[]): void => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					skillData.classList.add('data-active');
