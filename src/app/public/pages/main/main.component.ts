@@ -7,6 +7,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import * as Aos from 'aos';
 
 @Component({
 	selector: 'gac-main',
@@ -30,7 +31,7 @@ export class MainComponent implements OnInit {
 		const sections = document.querySelectorAll('section[id]');
 
 		const scrollActive = (): void => {
-			const scrollY = window.pageYOffset;
+			const scrollY = window.scrollY;
 
 			sections.forEach((current: Element) => {
 				const sectionHeight = (current as HTMLElement).offsetHeight,
@@ -48,5 +49,7 @@ export class MainComponent implements OnInit {
 			});
 		};
 		window.addEventListener('scroll', scrollActive);
+
+		Aos.init();
 	}
 }

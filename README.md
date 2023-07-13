@@ -68,3 +68,12 @@ yarn add -D lint-staged
 ~~~
 yarn add @emailjs/browser
 ~~~
+
+7. Implementar Libreria para animacion con Scroll
+~~~
+yarn add aos
+~~~
+~~~
+yarn add -D @types/aos
+~~~
+

@@ -1,5 +1,7 @@
 .skills {
 	background-color: var(--container-color);
+	overflow: hidden;
+
 	&__container {
 		padding-bottom: 2rem;
 		row-gap: 3.5rem;
@@ -19,6 +21,15 @@
 	}
 	&__data {
 		text-align: center;
+		transform: translateY(-30%);
+		transition: transform 0.8s ease-in-out, opacity 0.4s ease-in-out, filter 0.4s;
+		opacity: 0;
+		filter: blur(0.25rem);
+		&.data-active {
+			opacity: 1;
+			filter: blur(0);
+			transform: translateY(0);
+		}
 		@media screen and (min-width: 768px) {
 			text-align: start;
 			& .section__subtitle,
@@ -42,6 +53,15 @@
 		column-gap: 4rem;
 		justify-content: center;
 		align-items: baseline;
+		transform: translateY(30%);
+		transition: transform 0.8s ease-in-out, opacity 0.4s ease-in-out, filter 0.4s;
+		opacity: 0;
+		filter: blur(0.25rem);
+		&.content-active {
+			filter: blur(0);
+			opacity: 1;
+			transform: translateY(0);
+		}
 		@media screen and (max-width: 320px) {
 			grid-template-columns: max-content;
 			row-gap: 1rem;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface ICard {
@@ -14,8 +14,10 @@ interface ICard {
 	templateUrl: './projects.component.html',
 	styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
-	cards: ICard[] = [
+export class ProjectsComponent implements AfterViewInit {
+	@ViewChild('projects') project!: ElementRef;
+	@ViewChildren('card') cards!: QueryList<ElementRef>;
+	cardsContent: ICard[] = [
 		{
 			img: 'assets/images/project-img-1.jpg',
 			subTitle: 'Web',
@@ -47,4 +49,27 @@ export class ProjectsComponent {
 			title: 'Modern website'
 		}
 	];
+	ngAfterViewInit(): void {
+		const projects: HTMLElement = this.project.nativeElement;
+		const cards = this.cards;
+		const callbackFn = (entries: IntersectionObserverEntry[], observer: IntersectionObserver): void => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					cards.forEach((el: ElementRef) => {
+						el.nativeElement.classList.add('card-active');
+					});
+				} else {
+					cards.forEach((el: ElementRef) => {
+						el.nativeElement.classList.remove('card-active');
+					});
+				}
+			});
+		};
+
+		const observer = new IntersectionObserver(callbackFn, {
+			rootMargin: '20px',
+			threshold: 0.2
+		});
+		observer.observe(projects);
+	}
 }
