@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit, AfterViewInit {
 		const skillContent = this.skillContent.nativeElement;
 
 		const callbackFn = (entries: IntersectionObserverEntry[]): void => {
-			entries.forEach((entry) => {
+			entries.forEach((entry: IntersectionObserverEntry) => {
 				if (entry.isIntersecting) {
 					skillData.classList.add('data-active');
 					skillContent.classList.add('content-active');
@@ -36,7 +36,7 @@ export class SkillsComponent implements OnInit, AfterViewInit {
 
 		const observer = new IntersectionObserver(callbackFn, {
 			rootMargin: '20px',
-			threshold: 0.5
+			threshold: 0.2
 		});
 		observer.observe(skill);
 	}

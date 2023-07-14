@@ -1,5 +1,7 @@
 /*=============== BASE ===============*/
-* {
+*,
+::before,
+::after {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -67,4 +69,7 @@ svg {
 }
 ::-webkit-slider-thumb:hover {
 	background-color: hsl(228, 8%, 45%);
+}
+::selection {
+	background-color: var(--first-color-light);
 }
