@@ -1,12 +1,5 @@
 .skills {
-	//background-color: var(--container-color);
-	background-image: linear-gradient(hsla(var(--hue), 0%, 0%, 0.95), hsla(var(--hue), 0%, 0%, 0.85)),
-		url('src/assets/images/bgi-2.jpg');
-	background-position: center left;
-	background-size: cover;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+	background-color: var(--container-color);
 	overflow: hidden;
 	position: relative;
 

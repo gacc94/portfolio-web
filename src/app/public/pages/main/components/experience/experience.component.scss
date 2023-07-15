@@ -1,0 +1,112 @@
+.experience {
+	//background-color: var(--container-color);
+	background-image: linear-gradient(hsla(var(--hue), 0%, 0%, 0.9), hsla(var(--hue), 0%, 0%, 0.85)),
+		url('src/assets/images/bgi-2.jpg');
+	background-position: center left;
+	background-size: cover;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	&__container {
+		justify-content: center;
+		padding-block: 1rem;
+	}
+	&__ul {
+	}
+	&__li {
+		position: relative;
+		//border: 1px solid orange;
+		column-gap: 0;
+		@media screen and (min-width: 576px) {
+			grid-template-columns: 480px;
+		}
+		@media screen and (min-width: 1023px) {
+			grid-template-columns: repeat(2, 450px);
+
+			&:nth-child(odd) {
+				@media screen and (min-width: 1023px) {
+					& .experience__data {
+						grid-column-start: 2;
+						&:before {
+							width: 0;
+						}
+					}
+				}
+				& .experience__data {
+					margin-right: 0;
+				}
+				& .experience__time {
+					left: -2.55rem;
+				}
+			}
+			&:nth-child(even) {
+				& .experience__data {
+					margin-left: 0;
+				}
+				& .experience__data:after {
+					width: 0;
+				}
+				& .experience__time {
+					right: -2.55rem;
+				}
+			}
+		}
+		&:last-child {
+			& .experience__data {
+				&:after,
+				&:before {
+					height: 100%;
+				}
+			}
+		}
+	}
+	&__data {
+		position: relative;
+		padding: 1.5rem;
+		margin-left: 1.5rem;
+		border: 1px solid var(--first-color);
+		border-radius: 0.5rem;
+		@media screen and (min-width: 1023px) {
+			margin-inline: 1.5rem;
+		}
+		& .section__subtitle {
+			text-align: initial;
+		}
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			width: 0.2rem;
+			border-radius: 0.5rem;
+			height: calc(100% + 1.5rem);
+			background-color: var(--first-color);
+		}
+		&:after {
+			left: -1.665rem;
+		}
+		&:before {
+			right: -1.665rem;
+			@media screen and (max-width: 1022px) {
+				width: 0;
+			}
+		}
+	}
+	&__description {
+		font-size: var(--small-font-size);
+	}
+	&__time {
+		position: absolute;
+		background-color: var(--first-color-alt);
+		color: var(--title-color);
+		font-size: var(--normal-font-size);
+		top: 0;
+		padding: 0.35rem 0.5rem;
+		clip-path: circle(50% at 50% 50%);
+		//clip-path: polygon(51% 4%, 90% 20%, 100% 60%, 76% 92%, 25% 91%, 0% 60%, 10% 20%);
+		z-index: 1;
+		@media screen and (max-width: 1022px) {
+			left: -2.55rem;
+		}
+	}
+}

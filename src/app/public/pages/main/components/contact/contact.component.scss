@@ -33,6 +33,7 @@
 		border-radius: 0.5rem;
 		background-color: var(--container-color);
 		color: var(--title-color);
+		border: 1px solid var(--first-color);
 		&::placeholder {
 			color: var(--text-color);
 		}

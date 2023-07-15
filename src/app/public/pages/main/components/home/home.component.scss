@@ -59,13 +59,16 @@
 	}
 	&__social-link {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		background-color: var(--first-color-alt);
-		padding: 0.5rem;
+		padding: 0.65rem;
 		color: var(--title-color);
 		font-size: 1.5rem;
 		position: relative;
 		z-index: 1;
-		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		//clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		clip-path: polygon(51% 4%, 90% 20%, 100% 60%, 76% 92%, 25% 91%, 0% 60%, 10% 20%);
 		transition: transform 0.4s;
 
 		&:hover {
