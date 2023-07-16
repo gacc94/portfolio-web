@@ -1,5 +1,6 @@
 .home {
 	background-color: var(--container-color);
+	overflow: hidden;
 	&__container {
 		@media screen and (min-width: 576px) {
 			grid-template-columns: 360px;

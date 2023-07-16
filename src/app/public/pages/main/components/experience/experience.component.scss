@@ -94,6 +94,7 @@
 	}
 	&__description {
 		font-size: var(--small-font-size);
+		margin-bottom: 0.5rem;
 	}
 	&__time {
 		position: absolute;
@@ -109,4 +110,16 @@
 			left: -2.55rem;
 		}
 	}
+	&__skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem 0.5rem;
+	}
+	&__head {
+		color: var(--first-color);
+		font-size: var(--normal-font-size);
+	}
+}
+.svg-icon {
+	width: 1.6rem;
 }
