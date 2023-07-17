@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import * as Aos from 'aos';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { IntersectionObserverDirective } from '../../common/directives/intersection-observer.directive';
 
 @Component({
 	selector: 'gac-main',
@@ -22,7 +23,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
 		ProjectsComponent,
 		ContactComponent,
 		FooterComponent,
-		ExperienceComponent
+		ExperienceComponent,
+		IntersectionObserverDirective
 	],
 	templateUrl: './main.component.html',
 	styleUrls: ['./main.component.scss']

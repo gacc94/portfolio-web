@@ -7,6 +7,24 @@
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	&.animate {
+		& .experience__li {
+			&:nth-child(odd) {
+				& .experience__data {
+					transform: translateX(0);
+					opacity: 1;
+					filter: blur(0);
+				}
+			}
+			&:nth-child(even) {
+				& .experience__data {
+					transform: translateX(0);
+					opacity: 1;
+					filter: blur(0);
+				}
+			}
+		}
+	}
 	&__container {
 		justify-content: center;
 		padding-block: 1rem;
@@ -34,6 +52,9 @@
 				}
 				& .experience__data {
 					margin-right: 0;
+					transform: translateX(-20%);
+					opacity: 0;
+					filter: blur(0.25rem);
 				}
 				& .experience__time {
 					left: -2.55rem;
@@ -42,6 +63,9 @@
 			&:nth-child(even) {
 				& .experience__data {
 					margin-left: 0;
+					transform: translateX(20%);
+					opacity: 0;
+					filter: blur(0.25rem);
 				}
 				& .experience__data:after {
 					width: 0;
@@ -66,6 +90,7 @@
 		margin-left: 1.5rem;
 		border: 1px solid var(--first-color);
 		border-radius: 0.5rem;
+		transition: transform 0.8s ease-in-out, opacity 0.4s ease-in-out, filter 0.4s;
 		@media screen and (min-width: 1023px) {
 			margin-inline: 1.5rem;
 		}

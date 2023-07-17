@@ -1,7 +1,19 @@
 .services {
+	overflow: hidden;
+	&.animate {
+		& .services__container {
+			opacity: 1;
+			filter: blur(0);
+			transform: translateY(0);
+		}
+	}
 	&__container {
 		row-gap: 2rem;
 		padding-block: 1rem;
+		transform: translateY(30%);
+		opacity: 0;
+		transition: transform 0.8s ease-in-out, opacity 0.4s ease-in-out, filter 0.4s;
+		filter: blur(0.25rem);
 		@media screen and (min-width: 576px) {
 			grid-template-columns: 360px;
 			justify-content: center;
