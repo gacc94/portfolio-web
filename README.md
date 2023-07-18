@@ -76,4 +76,7 @@ yarn add aos
 ~~~
 yarn add -D @types/aos
 ~~~
-
+8. Ngx-toastr
+~~~
+yarn add ngx-toastr
+~~~

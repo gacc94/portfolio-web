@@ -10,6 +10,7 @@
 					name="user-name"
 					placeholder="Enter your name"
 					class="contact__input"
+					[class.error]="isValidField(nameField)"
 				/>
 				<input
 					formControlName="email"
@@ -17,6 +18,7 @@
 					name="user-email"
 					placeholder="Enter your email"
 					class="contact__input"
+					[class.error]="isValidField(emailField)"
 				/>
 			</div>
 			<textarea
@@ -24,6 +26,7 @@
 				name="user-project"
 				placeholder="Enter your message"
 				class="contact__textarea"
+				[class.error]="isValidField(messageField)"
 			></textarea>
 			<!--			<p class="contact__message" id="contact-message">Message</p>-->
 			<button type="submit" class="button contact__button">Send Message</button>

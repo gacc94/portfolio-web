@@ -63,3 +63,9 @@
 		color: var(--title-color);
 	}
 }
+.error {
+	border: 1px solid #d33833;
+	& .contact__input::placeholder {
+		color: #d33833;
+	}
+}
