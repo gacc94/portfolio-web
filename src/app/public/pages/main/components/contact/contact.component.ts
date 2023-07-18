@@ -50,15 +50,15 @@ export class ContactComponent implements OnInit {
 		const template: IEmailUser = { name: name.toUpperCase(), email, message };
 		console.log(template);
 		this.emailService.sendEmail(template).subscribe({
-			next: (value: EmailJSResponseStatus) => {
+			next: (value: EmailJSResponseStatus): void => {
 				console.log(value);
 				this.toastService.success('Message sent successfully ', 'APP-GACC');
 				this.form.reset();
 			},
-			error: (err) => {
+			error: (err: HttpErrorResponse): void => {
 				// if (err instanceof HttpErrorResponse) console.log(err.message);
 				// console.log('Message not sent (service error)');
-				this.toastService.error('Message not sent (service error)', 'APP-GACC');
+				this.toastService.error('Message not sent (service error): ' + err.message, 'APP-GACC');
 			}
 		});
 	}
